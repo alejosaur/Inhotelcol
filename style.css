@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*----------------------------------------------------------------
     General Rules
 ----------------------------------------------------------------*/
@@ -1302,7 +1301,7 @@ nav ul.sub-menu > li:last-child > a {
 }
 
 .dribbble-items .item {
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
  /* Fix some Chrome flikering on hover */;
 }
 
@@ -2065,6 +2064,14 @@ section.greyish {
     border-style: none;
 }
 
+.gm-style > div.gmnoprint {
+    /* display: none; */
+}
+
+.gm-style > div > a {
+    /* display: none !important; */
+}
+
 .infoBox {
     text-align: center;
 }
@@ -2239,7 +2246,7 @@ section.greyish {
 }
 
 .no-cssanimations .owl-item.active .photocaption {
-    transform: translateX(0);   
+    -ms-transform: translateX(0);   
 }
 
 .owl-item.active .intro-mockup img {
@@ -2910,12 +2917,14 @@ footer .row-content.buffer {
     LineIcon font - Made with Fontastic.me - Icons: http://graphicburger.com/line-icon-set-for-ui/
 ----------------------------------------------------------------*/
 
+@charset "UTF-8";
+
 @font-face {
     font-weight: normal;
-    font-style: normal;
-    font-family: "lineicon";
-    src:url("fonts/lineicon.eot");
-    src:url("fonts/lineicon.eot?#iefix") format("embedded-opentype"),
+  font-style: normal;
+  font-family: "lineicon";
+  src:url("fonts/lineicon.eot");
+  src:url("fonts/lineicon.eot?#iefix") format("embedded-opentype"),
     url("fonts/lineicon.woff") format("woff"),
     url("fonts/lineicon.ttf") format("truetype"),
     url("fonts/lineicon.svg#lineicon") format("svg");
@@ -2928,7 +2937,7 @@ footer .row-content.buffer {
     font-style: normal !important;
     font-variant: normal !important;
     font-family: "lineicon" !important;
-    speak-as: none;
+    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -2940,7 +2949,7 @@ footer .row-content.buffer {
     font-style: normal !important;
     font-variant: normal !important;
     font-family: "lineicon" !important;
-    speak-as: none;
+    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -3453,6 +3462,12 @@ footer .row-content.buffer {
     vertical-align: baseline;
 }
 
+.icon,
+.fa {
+    /* vertical-align: middle; */;
+}
+
+
 /*----------------------------------------------------------------
     Hide icons underline
 ----------------------------------------------------------------*/
@@ -3870,7 +3885,7 @@ footer .row-content.buffer {
 }
 
 .slider .owl-theme .owl-controls .owl-buttons div {
-    color: #aaa;
+    color: transparent;
 }
 
 .gallery.slider .owl-theme .owl-controls .owl-buttons div {
@@ -4503,7 +4518,7 @@ footer .row-content.buffer {
     position: relative;
     display: none;
     width: 100%;
-    touch-action: pan-y;
+    -ms-touch-action: pan-y;
 }
 
 .owl-carousel .owl-wrapper {
@@ -4585,8 +4600,8 @@ footer .row-content.buffer {
     -o-perspective-origin-x: 50%;
     -o-perspective-origin-y: 50%;      
     perspective: 1200px;
-    -ms-perspective-origin-x: 50%;
-    -ms-perspective-origin-y: 50%;     
+    perspective-origin-x: 50%;
+    perspective-origin-y: 50%;     
 }
 /* fade */
 .owl-fade-out {
@@ -5317,3 +5332,4 @@ footer .row-content.buffer {
 .slick-arrow.slick-hidden {
     display: none;
 }
+

@@ -1,5 +1,5 @@
 <?php
-    require_once ("http://inhotelcol.org/boletin_inc.php");
+require_once ("boletin_inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,11 +22,11 @@
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
-		<link rel="icon" href="http://inhotelcol.org/favicon.ico">
-		<link rel="apple-touch-icon" href="http://inhotelcol.org/img/in-icon.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="http://inhotelcol.org/img/in-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="http://inhotelcol.org/img/in-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="http://inhotelcol.org/img/in-icon-152x152.png">
+		<link rel="icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="img/in-icon.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/in-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/in-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/in-icon-152x152.png">
 		<style type="text/css">
 		body,td,th {
 	        font-family: "Open Sans", sans-serif;
@@ -43,7 +43,7 @@
 			<div class="row">
 				<div class="nav-inner row-content buffer-left buffer-right even clear-after">
 					<div id="brand">
-						<h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="http://inhotelcol.org/index.php"><img src="http://inhotelcol.org/img/logo.png" styles="max-width:50%" alt="Inhotelcol"></a></h1>
+						<h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="index.php"><img src="http://inhotelcol.org/img/logo.png" styles="max-width:50%" alt="Inhotelcol"></a></h1>
 					</div><!-- brand -->
 					<a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
 					<nav>
@@ -81,12 +81,12 @@
 				</div><!-- row-content -->	
 			</div><!-- row -->	
 		</header>
-
+        
         <main role="main">
             <div id="intro-wrap">
                 <div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">					
                         
-                    <div class="intro-item" style="background-image: url(http://inhotelcol.org/img/2.png);">
+                    <div class="intro-item" style="background-image: url(img/2.png);">
                         <div class="caption">
                             <h2>BIENVENIDOS</h2>
                             <span class="cap2">Asociación de propietarios de la Industria Hotelera</span>
@@ -96,7 +96,7 @@
                                 
                                 </div><!-- photocaption -->						
                         </div>						
-                        <div class="intro-item" style="background-image: url(http://inhotelcol.org/img/3.png);">
+                        <div class="intro-item" style="background-image: url(img/3.png);">
                             <div class="caption">
                                 <h2>BIENVENIDOS</h2>
                                 <span class="cap2">Asociación de propietarios de la Industria Hotelera</span>
@@ -106,7 +106,7 @@
                                 
                             </div><!-- photocaption -->						
                         </div>		
-                        <div class="intro-item" style="background-image: url(http://inhotelcol.org/img/4.png);">
+                        <div class="intro-item" style="background-image: url(img/4.png);">
                             <div class="caption">
                                 <h2>BIENVENIDOS</h2>
                                 <span class="cap2">Asociación de propietarios de la Industria Hotelera</span>
@@ -186,8 +186,21 @@
                     </div>
                 </section>								
 
-                <section class="row section" style="background-color:#f2fdff">
-                    <H2>"ADFSDF"</H2>
+                <section class="row section" style="background-color:#f2fdff; max-height: 450px;">
+                    <div class="slider iphone-slider" data-autoplay="1000" style="max-height: 200px; margin-top: -3em;">
+                    	<figure>
+                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
+                    	</figure>
+                    </div>
                 </section>
 
                 <section class="row section">
