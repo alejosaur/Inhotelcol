@@ -122,59 +122,30 @@ require_once ("boletin_inc.php");
 
             <div id="main">
             
-                <section class="row section text-light" style="background-color:#f2fdff">
-                    <div class="row-content buffer even clear-after" style="min-height: 600px;">
-                        <div class="column six push-six last-special">
-                            <h2><?=utf8_encode($nombre_boletin)?></h2>
-                                
-                        
-                            <?=utf8_encode($texto_contenido)?>
-                                
-                            <p><a href="boletin.php?id=<?=$id_contenido?>">Ver Más</a></p>
-                            
-                            <div class="timeline column six last">
-                                <div class="year">
-                                    
+                 <section class="row section text-light" style="background-color:#fff">
+                    <div class="row-content buffer even clear-after" style="min-height: 600px; padding-top:0.5%; padding-bottom:0.5%">
+                        <h2>BOLETINES</h2>		
                                     <?php
                                     
-                                    for ($i=0; $i < $boletines; $i++) { 
-                                        
-                                        echo '<div class="experience">
-                                        <span class="circle"></span>
-                                        <div class="small-icon red"><i class="icon icon-folder"></i></div>
-                                        <div class="experience-info clear-after">
-                                            <h5><a href="boletin.php?id=' . $boletinid[$i] . '">' . utf8_encode($boletinombre[$i]) . '</a></h5>
+                                        for ($i=0; $i < 3; $i++) { 
                                             
+                                            echo '<div class="column four '.($i==2?'last':'').' centertxt">
+                                                	<img src="galeria/' . $boletinimg[$i] . '"></i>
+                                                	<div class="big-icon-text clear-after">
+                                                		<h4>' . utf8_encode($boletiname[$i]) . '</h4>
+                                                		<p class="text-s">' . utf8_encode($boletintxt[$i]) . '</p>
+                                                		<a class="button transparent aqua" href="boletin.php?id=' . $boletinid[$i] . '">Leer más</a>
+                                                	</div>
+                                                </div>';
                                             
-                                        </div><!-- experience-info -->
-                                    </div>';
-                                        
-                                    }
+                                        }
                                     ?>							
-                                </div>
-                            </div>
-        
-                        </div>						
-                        <div class="side-mockup left-mockup animation">
-                            
-                            <figure>
-                                <div>
-                                    <p>
-                                        <?if($imagen_boletin!="")
-                                            echo '<img src="galeria/' . $imagen_boletin . '" alt="">';
-                                        ?>
-                                    </p>
-                                </div>
-                                        
-                            </figure>
-                            <div class="slider iphone-slider white" data-autoplay="3000">
-                            </div>
-                        </div>						
+                                					
                     </div>	
                 </section>
                 
                 
-                <div class="row-content buffer even clear-after">
+                <div class="row-content buffer even clear-after" style="padding-top:0.5%; padding-bottom:0.5%">
                     <h2>NUESTRO PERIÓDICO</h2>		
                     <iframe style="width:100%; height:600px;" src="//e.issuu.com/embed.html#14431081/56252044" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -186,24 +157,36 @@ require_once ("boletin_inc.php");
                     </div>
                 </section>								
 
-                <section class="row section" style="background-color:#f2fdff; max-height: 450px;">
-                    <div class="slider iphone-slider" data-autoplay="1000" style="max-height: 200px; margin-top: -3em;">
+                <section class="row section" style="background-color:#fff; max-height: 425px;">
+                    <h2 style="padding: 0.5em 0.5em 0.5em 0.5em;margin-top:0;margin-bottom:0">NUESTROS AFILIADOS</h2>		
+                    <div class="slider iphone-slider" data-autoplay="1000" style="max-height: 200px; margin-top: -6em;">
                     	<figure>
-                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="https://raw.githubusercontent.com/rexxars/react-hexagon/HEAD/logo/react-hexagon.png" alt="" style="max-height: 400px;"></div>
-                    		<div><img src="http://maffrigby.com/wp-content/uploads/2014/07/angularjs-logo-trans.png" alt="" style="max-height: 400px;"></div>
-                    	</figure>
+                    		<div><img src="logos/diamante.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Flores de la 66.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Hospedaje La 18.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Hotel Iguazu.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Hotel los Cambulos.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Hotel Ney.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Hotel Normandy.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Hotel vienes.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Las Palmas.jpg" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/LOGO AMERICAS.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/LOGO EMBAJADA REAL.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Logo Hotel Cabrera.jpg" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/LOGO JORVI.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Motel la Cita.png" alt="" style="max-height: 400px;"></div>
+                    		<div><img src="logos/Posada el paso.jpg" alt="" style="max-height: 400px;"></div>
+                        	<div><img src="logos/Rotterdam.jpg" alt="" style="max-height: 400px;"></div>
+                        	<div><img src="logos/vip's Motel.jpg" alt="" style="max-height: 400px;"></div>
+                        </figure>
                     </div>
                 </section>
 
                 <section class="row section">
+                    
+                    
+                    <h2 style="padding: 0.5em 0.5em 0.5em 0.5em;margin-top:0;margin-bottom:0">NUESTRA UBICACIÓN</h2>	
+                    
                     <style>
                         #map {
                             height: 400px;
@@ -215,14 +198,39 @@ require_once ("boletin_inc.php");
                     <div id="map"></div>
                         <script>
                             function initMap() {
-                                var uluru = {lat: 4.661630, lng: -74.061189};
+                                var uluru = {lat: 4.661584, lng: -74.061058};
+                                var image = {
+                                    url:'img/logo.png',
+                                    scaledSize: new google.maps.Size(50, 58.7499999991)
+                                }
                                 var map = new google.maps.Map(document.getElementById('map'), {
                                     zoom: 19,
-                                    center: uluru
+                                    center: uluru,
+                                    icon: image
                                 });
+                                
+                                var styles = {
+                                    default: null,
+                                    hide: [
+                                      {
+                                        featureType: 'poi',
+                                        stylers: [{visibility: 'off'}]
+                                      },
+                                      {
+                                        featureType: 'transit',
+                                        elementType: 'labels.icon',
+                                        stylers: [{visibility: 'off'}]
+                                      }
+                                    ]
+                                };
+
+                            map.setOptions({styles: styles['hide']});
+
+                                
                                 var marker = new google.maps.Marker({
                                     position: uluru,
-                                    map: map
+                                    map: map,
+                                    icon:image
                                 });
                             }
                         </script>
